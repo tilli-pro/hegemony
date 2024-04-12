@@ -1,0 +1,20 @@
+[
+  {
+    "id": "allow-anonymoose",
+    "version": "v0.40.7",
+    "upstream": { "url": "https://dev.tilli.pro/head" },
+    "match": { "url": "http://localhost:4455/head", "methods": ["GET"] },
+    "authenticators": [{ "handler": "anonymous" }],
+    "authorizer": { "handler": "allow" },
+    "mutators": [
+      {
+        "handler": "header",
+        "config": {
+          "headers": {
+            "X-User": "{{ print .Subject }}"
+          }
+        }
+      }
+    ]
+  }
+]

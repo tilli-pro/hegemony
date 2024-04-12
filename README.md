@@ -1,2 +1,3 @@
-# hegemony
-one identity provider to rule them all
+# HEGEMONY
+
+And one identity provider to rule them all.
